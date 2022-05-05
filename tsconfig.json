@@ -1,6 +1,14 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["./src/*"],
+      "screens/*": ["./src/screens/*"],
+      "components/*": ["./src/components/*"],
+      "models/*": ["./models/*"]
+    },
     "strict": true
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }

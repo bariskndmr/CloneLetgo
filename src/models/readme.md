@@ -1,0 +1,1 @@
+models klasörü typescript kullandığımız için propreties'leri ana component'den çocuk component'e dataları taşırken belli başlı data formatlarını vermemiz gerekiyor. bu yüzden models açtık.
