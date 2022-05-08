@@ -1,10 +1,10 @@
 export default [
-    {
-        id: "1",
-        name: "otoplus",
-        src: require("../assets/categoryOto2.png"),
-      }
-  ,{
+  {
+    id: "1",
+    name: "Oto Plus",
+    src: require("../assets/categoryOto2.png"),
+  },
+  {
     id: "2",
     name: "Araba",
     src: require("../assets/categoryAraba.png"),
@@ -28,5 +28,5 @@ export default [
     id: "6",
     name: "Giyim",
     src: require("../assets/categoryGiyim.png"),
-  }
+  },
 ];

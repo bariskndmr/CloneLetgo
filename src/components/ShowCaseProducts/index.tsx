@@ -23,6 +23,7 @@ const ShowCasePostings = () => {
           style={styles.showCaseProducts}
           bounces={true}
           horizontal={true}
+          showsHorizontalScrollIndicator={false}
         >
           {showCaseProducts.map((item) => {
             return (
