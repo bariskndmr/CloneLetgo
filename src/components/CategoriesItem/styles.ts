@@ -4,15 +4,15 @@ const { width } = Dimensions.get("window");
 
 export default StyleSheet.create({
   container: {
-    width: width * 0.17,
-    height: width * 0.17,
+    width: width * 0.18,
+    height: width * 0.18,
     alignItems: "center",
     justifyContent: "space-between",
     marginHorizontal: 5,
   },
   image: {
-    width: width * 0.12,
-    height: width * 0.12,
+    width: width * 0.14,
+    height: width * 0.14,
     borderRadius: 50,
   },
   text: {
