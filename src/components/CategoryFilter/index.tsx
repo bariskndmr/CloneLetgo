@@ -14,8 +14,6 @@ function CategoryFilter() {
     return () => setCategories([]);
   }, []);
 
-  console.log(categories);
-
   return (
     <ScrollView
       bounces={true}
