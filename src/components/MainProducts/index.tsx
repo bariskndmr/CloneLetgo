@@ -8,7 +8,12 @@ import { Product } from "src/models";
 
 import styles from "./styles";
 
-const MainProducts = () => {
+type props = {
+  hasButton?: boolean;
+  title: string;
+};
+
+const MainProducts = ({ hasButton, title }: props) => {
   const [mainProducts, setMainProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -17,7 +22,7 @@ const MainProducts = () => {
 
   return (
     <>
-      <ProductsHeader title="Pendik" buttonText="Düzelt" />
+      <ProductsHeader hasButton={hasButton} title={title} buttonText="Düzelt" />
       <View style={styles.container}>
         <View style={styles.listContainer}>
           {mainProducts.map((item) => {

@@ -12,7 +12,7 @@ const HomeScreen = () => {
       <MessageNotification />
       <CategoryFilter />
       <ShowCasePostings />
-      <MainProducts />
+      <MainProducts title="Pendik" />
     </ScrollView>
   );
 };

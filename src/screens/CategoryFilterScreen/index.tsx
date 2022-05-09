@@ -6,13 +6,13 @@ import MessageNotification from "src/components/MessageNotification";
 
 import styles from "./styles";
 
-function CategoryFilter() {
+function CategoryFilterScreen() {
   return (
     <ScrollView>
       <MessageNotification />
-      <MainProducts />
+      <MainProducts hasButton={false} title="Arama Sonuçları(1041565)" />
     </ScrollView>
   );
 }
 
-export default CategoryFilter;
+export default CategoryFilterScreen;

@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import CategoryFilterScreen from "src/screens/CategoryFilterScreen";
 import HomeScreen from "src/screens/HomeScreen";
 
 const Stack = createNativeStackNavigator();
@@ -56,6 +57,13 @@ function HomeNavigator() {
       <Stack.Screen
         name="Home"
         component={HomeScreen}
+        options={{
+          header: () => <MainHeaderComponent />,
+        }}
+      />
+      <Stack.Screen
+        name="CategoryFilter"
+        component={CategoryFilterScreen}
         options={{
           header: () => <MainHeaderComponent />,
         }}

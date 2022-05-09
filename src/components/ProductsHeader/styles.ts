@@ -5,6 +5,7 @@ export default StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     marginHorizontal: "4%",
+    marginTop: 10,
   },
   title: {
     fontWeight: "bold",
