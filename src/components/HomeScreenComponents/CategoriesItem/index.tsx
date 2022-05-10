@@ -7,18 +7,18 @@ import { Category } from "src/models";
 import styles from "./styles";
 
 type Categories = {
-  category: Category;
+  item: Category;
 };
 
-function CategoriesItem({ category }: Categories) {
+function CategoriesItem({ item }: Categories) {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate("CategoryFilter")}
+      onPress={() => navigation.navigate("CategoryFilter", { category: item })}
       style={styles.container}
     >
-      <Image style={styles.image} source={category.src} resizeMode="stretch" />
-      <Text style={styles.text}>{category.name}</Text>
+      <Image style={styles.image} source={item.src} resizeMode="stretch" />
+      <Text style={styles.text}>{item.name}</Text>
     </TouchableOpacity>
   );
 }

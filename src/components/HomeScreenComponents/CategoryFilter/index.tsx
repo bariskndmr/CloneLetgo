@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ScrollView } from "react-native";
 
-import categoriesData from "../../../assets/categories";
+import categoriesData from "../../../../assets/categories";
 import { Category } from "src/models";
 import CategoriesItem from "../CategoriesItem";
 import styles from "./styles";
@@ -22,7 +22,7 @@ function CategoryFilter() {
       style={styles.container}
     >
       {categories.map((item) => {
-        return <CategoriesItem category={item} key={item.id} />;
+        return <CategoriesItem item={item} key={item.id} />;
       })}
     </ScrollView>
   );

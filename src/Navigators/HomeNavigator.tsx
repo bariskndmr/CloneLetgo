@@ -7,13 +7,21 @@ import {
   TextInput,
 } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { FontAwesome5 } from "@expo/vector-icons";
 
 import CategoryFilterScreen from "src/screens/CategoryFilterScreen";
 import HomeScreen from "src/screens/HomeScreen";
+import { useNavigation } from "@react-navigation/native";
 
 const Stack = createNativeStackNavigator();
 
-const MainHeaderComponent = () => {
+type HeaderProps = {
+  back?: boolean;
+  onPress?: any;
+  text: string;
+};
+
+const MainHeaderComponent = ({ back = false, onPress, text }: HeaderProps) => {
   return (
     <SafeAreaView
       style={{
@@ -24,13 +32,17 @@ const MainHeaderComponent = () => {
         marginVertical: 5,
       }}
     >
-      <TouchableOpacity>
-        <Image
-          style={{ width: 35, height: 35, borderRadius: 50 }}
-          source={{
-            uri: "https://starsjacket.com/wp-content/uploads/2021/06/Jake-Peralta-Brooklyn-99-Brown-Leather-Jacket.jpg",
-          }}
-        />
+      <TouchableOpacity onPress={onPress}>
+        {back ? (
+          <FontAwesome5 name="arrow-left" size={20} color="#989898" />
+        ) : (
+          <Image
+            style={{ width: 35, height: 35, borderRadius: 50 }}
+            source={{
+              uri: "https://starsjacket.com/wp-content/uploads/2021/06/Jake-Peralta-Brooklyn-99-Brown-Leather-Jacket.jpg",
+            }}
+          />
+        )}
       </TouchableOpacity>
       <TextInput
         style={{
@@ -45,27 +57,35 @@ const MainHeaderComponent = () => {
         placeholder="Ara..."
       />
       <Text style={{ color: "#ff184d", fontSize: 18, fontWeight: "500" }}>
-        Filtrele
+        {text}
       </Text>
     </SafeAreaView>
   );
 };
 
 function HomeNavigator() {
+  const navigation = useNavigation();
+
   return (
     <Stack.Navigator>
       <Stack.Screen
         name="Home"
         component={HomeScreen}
         options={{
-          header: () => <MainHeaderComponent />,
+          header: () => <MainHeaderComponent text="Filtrele" />,
         }}
       />
       <Stack.Screen
         name="CategoryFilter"
         component={CategoryFilterScreen}
         options={{
-          header: () => <MainHeaderComponent />,
+          header: () => (
+            <MainHeaderComponent
+              text="Filtrele (1)"
+              back={true}
+              onPress={() => navigation.goBack()}
+            />
+          ),
         }}
       />
     </Stack.Navigator>
