@@ -9,7 +9,7 @@ function CategoryFilterScreen(props) {
   const [category, setCategory] = useState(props.route.params.category);
 
   return (
-    <ScrollView>
+    <ScrollView style={{ backgroundColor: "#fff" }}>
       <CategoryFiltering category={category} />
       <MessageNotification />
       <MainProducts hasButton={false} title="Arama Sonuçları(1041565)" />

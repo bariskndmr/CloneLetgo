@@ -8,7 +8,7 @@ import ShowCasePostings from "src/components/ShowCaseProducts";
 
 const HomeScreen = () => {
   return (
-    <ScrollView>
+    <ScrollView style={{ backgroundColor: "#fff" }}>
       <MessageNotification />
       <CategoryFilter />
       <ShowCasePostings />

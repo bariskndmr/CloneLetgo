@@ -10,6 +10,7 @@ import {
 } from "@expo/vector-icons";
 
 import HomeNavigator from "./HomeNavigator";
+import PostNavigator from "./PostNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -106,7 +107,7 @@ function RootNavigator() {
       />
       <Tab.Screen
         name="İlanlarım"
-        component={HomeNavigator}
+        component={PostNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <AntDesign name="appstore1" size={24} color={color} />

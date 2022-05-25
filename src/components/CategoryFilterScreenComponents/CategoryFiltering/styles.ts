@@ -3,7 +3,10 @@ import { StyleSheet, Dimensions } from "react-native";
 const { height, width } = Dimensions.get("window");
 
 const basestyles = StyleSheet.create({
-  container: { marginVertical: 10, marginHorizontal: 12 },
+  container: {
+    padding: 12,
+    backgroundColor: "#fff",
+  },
   filteringContainer: {
     flexDirection: "row",
     alignItems: "center",
