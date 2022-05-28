@@ -8,10 +8,11 @@ import {
 } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 import CategoryFilterScreen from "src/screens/CategoryFilterScreen";
 import HomeScreen from "src/screens/HomeScreen";
-import { useNavigation } from "@react-navigation/native";
+import ProductDetailsScreen from "src/screens/ProductDetailsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -75,6 +76,7 @@ function HomeNavigator() {
           header: () => <MainHeaderComponent text="Filtrele" />,
         }}
       />
+      <Stack.Screen name="ProductDetail" component={ProductDetailsScreen} />
       <Stack.Screen
         name="CategoryFilter"
         component={CategoryFilterScreen}
